@@ -1,766 +1,243 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="5" failed="0" ignored="0" total="34" passed="29">
+<testng-results skipped="0" failed="0" ignored="0" total="31" passed="31">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="294583" started-at="2022-06-08T14:22:20 IST" finished-at="2022-06-08T14:27:14 IST">
+  <suite name="Suite" duration-ms="164694" started-at="2022-06-21T07:02:37 IST" finished-at="2022-06-21T07:05:22 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="294583" started-at="2022-06-08T14:22:20 IST" finished-at="2022-06-08T14:27:14 IST">
-      <class name="com.qa.testcases.PushNotificationsPageTestCase">
-        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.qa.testcases.PushNotificationsPageTestCase@68ceda24]" name="initializeDriver" is-config="true" duration-ms="43384" started-at="2022-06-08T14:25:08 IST" finished-at="2022-06-08T14:25:51 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeDriver -->
-        <test-method status="FAIL" signature="performLogin()[pri:0, instance:com.qa.testcases.PushNotificationsPageTestCase@68ceda24]" name="performLogin" is-config="true" duration-ms="20536" started-at="2022-06-08T14:25:51 IST" finished-at="2022-06-08T14:26:11 IST">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: username' (tried for 20 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: username' (tried for 20 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at com.qa.utility.WaitUtility.visibilityOfEleLocated(WaitUtility.java:22)
-at com.qa.utility.PageUtility.performSendKey(PageUtility.java:22)
-at com.qa.Pages.SignInPage.login(SignInPage.java:73)
-at com.qa.testcases.PushNotificationsPageTestCase.performLogin(PushNotificationsPageTestCase.java:24)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
-  (Session info: chrome=101.0.4951.54)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.4', revision: '535d840ee2'
-System info: host: 'DAN_RAJU', ip: '192.168.232.146', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f0e3ed53ca271515b90141a75b322578, findElement {using=name, value=username}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56949}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56949/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f0e3ed53ca271515b90141a75b322578
-at sun.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- performLogin -->
-        <test-method status="SKIP" signature="verifyPushNotificationPage()[pri:1, instance:com.qa.testcases.PushNotificationsPageTestCase@68ceda24]" name="verifyPushNotificationPage" duration-ms="0" started-at="2022-06-08T14:26:11 IST" finished-at="2022-06-08T14:26:11 IST">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: username' (tried for 20 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: username' (tried for 20 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at com.qa.utility.WaitUtility.visibilityOfEleLocated(WaitUtility.java:22)
-at com.qa.utility.PageUtility.performSendKey(PageUtility.java:22)
-at com.qa.Pages.SignInPage.login(SignInPage.java:73)
-at com.qa.testcases.PushNotificationsPageTestCase.performLogin(PushNotificationsPageTestCase.java:24)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
-  (Session info: chrome=101.0.4951.54)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.4', revision: '535d840ee2'
-System info: host: 'DAN_RAJU', ip: '192.168.232.146', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f0e3ed53ca271515b90141a75b322578, findElement {using=name, value=username}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56949}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56949/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f0e3ed53ca271515b90141a75b322578
-at sun.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyPushNotificationPage -->
-        <test-method status="SKIP" signature="verifyAlert()[pri:2, instance:com.qa.testcases.PushNotificationsPageTestCase@68ceda24]" name="verifyAlert" duration-ms="0" started-at="2022-06-08T14:26:11 IST" finished-at="2022-06-08T14:26:11 IST">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: username' (tried for 20 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: username' (tried for 20 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at com.qa.utility.WaitUtility.visibilityOfEleLocated(WaitUtility.java:22)
-at com.qa.utility.PageUtility.performSendKey(PageUtility.java:22)
-at com.qa.Pages.SignInPage.login(SignInPage.java:73)
-at com.qa.testcases.PushNotificationsPageTestCase.performLogin(PushNotificationsPageTestCase.java:24)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
-  (Session info: chrome=101.0.4951.54)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.4', revision: '535d840ee2'
-System info: host: 'DAN_RAJU', ip: '192.168.232.146', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f0e3ed53ca271515b90141a75b322578, findElement {using=name, value=username}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56949}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56949/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f0e3ed53ca271515b90141a75b322578
-at sun.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAlert -->
-        <test-method status="SKIP" signature="verifyTestReset()[pri:3, instance:com.qa.testcases.PushNotificationsPageTestCase@68ceda24]" name="verifyTestReset" duration-ms="0" started-at="2022-06-08T14:26:11 IST" finished-at="2022-06-08T14:26:11 IST">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: username' (tried for 20 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: username' (tried for 20 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at com.qa.utility.WaitUtility.visibilityOfEleLocated(WaitUtility.java:22)
-at com.qa.utility.PageUtility.performSendKey(PageUtility.java:22)
-at com.qa.Pages.SignInPage.login(SignInPage.java:73)
-at com.qa.testcases.PushNotificationsPageTestCase.performLogin(PushNotificationsPageTestCase.java:24)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
-  (Session info: chrome=101.0.4951.54)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.4', revision: '535d840ee2'
-System info: host: 'DAN_RAJU', ip: '192.168.232.146', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f0e3ed53ca271515b90141a75b322578, findElement {using=name, value=username}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56949}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56949/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f0e3ed53ca271515b90141a75b322578
-at sun.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTestReset -->
-        <test-method status="SKIP" signature="close()[pri:0, instance:com.qa.testcases.PushNotificationsPageTestCase@68ceda24]" name="close" is-config="true" duration-ms="-1654678571977" started-at="2022-06-08T14:26:11 IST" finished-at="1970-01-01T05:30:00 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- com.qa.testcases.PushNotificationsPageTestCase -->
+    <test name="Test" duration-ms="164694" started-at="2022-06-21T07:02:37 IST" finished-at="2022-06-21T07:05:22 IST">
       <class name="com.qa.testcases.ManageLocationTestCase">
-        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.qa.testcases.ManageLocationTestCase@103f852]" name="initializeDriver" is-config="true" duration-ms="13281" started-at="2022-06-08T14:26:48 IST" finished-at="2022-06-08T14:27:01 IST">
+        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.qa.testcases.ManageLocationTestCase@4c583ecf]" name="initializeDriver" is-config="true" duration-ms="7488" started-at="2022-06-21T07:05:03 IST" finished-at="2022-06-21T07:05:10 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method status="PASS" signature="performLogin()[pri:0, instance:com.qa.testcases.ManageLocationTestCase@103f852]" name="performLogin" is-config="true" duration-ms="1988" started-at="2022-06-08T14:27:01 IST" finished-at="2022-06-08T14:27:03 IST">
+        <test-method status="PASS" signature="performLogin()[pri:0, instance:com.qa.testcases.ManageLocationTestCase@4c583ecf]" name="performLogin" is-config="true" duration-ms="1858" started-at="2022-06-21T07:05:10 IST" finished-at="2022-06-21T07:05:12 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- performLogin -->
-        <test-method status="PASS" signature="verifyNewBtn()[pri:1, instance:com.qa.testcases.ManageLocationTestCase@103f852]" name="verifyNewBtn" duration-ms="5590" started-at="2022-06-08T14:27:03 IST" finished-at="2022-06-08T14:27:09 IST">
+        <test-method status="PASS" signature="verifyLocation()[pri:1, instance:com.qa.testcases.ManageLocationTestCase@4c583ecf]" name="verifyLocation" duration-ms="1857" started-at="2022-06-21T07:05:12 IST" finished-at="2022-06-21T07:05:14 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLocation -->
+        <test-method status="PASS" signature="verifyNewBtn()[pri:2, instance:com.qa.testcases.ManageLocationTestCase@4c583ecf]" name="verifyNewBtn" duration-ms="3417" started-at="2022-06-21T07:05:14 IST" finished-at="2022-06-21T07:05:17 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyNewBtn -->
-        <test-method status="PASS" signature="verifyNewBtnAlert()[pri:2, instance:com.qa.testcases.ManageLocationTestCase@103f852]" name="verifyNewBtnAlert" duration-ms="73" started-at="2022-06-08T14:27:09 IST" finished-at="2022-06-08T14:27:09 IST">
+        <test-method status="PASS" signature="verifyNewBtnAlert()[pri:3, instance:com.qa.testcases.ManageLocationTestCase@4c583ecf]" name="verifyNewBtnAlert" duration-ms="63" started-at="2022-06-21T07:05:17 IST" finished-at="2022-06-21T07:05:17 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyNewBtnAlert -->
-        <test-method status="PASS" signature="verifySearchBtn()[pri:3, instance:com.qa.testcases.ManageLocationTestCase@103f852]" name="verifySearchBtn" duration-ms="2420" started-at="2022-06-08T14:27:09 IST" finished-at="2022-06-08T14:27:11 IST">
+        <test-method status="PASS" signature="verifySearchBtn()[pri:4, instance:com.qa.testcases.ManageLocationTestCase@4c583ecf]" name="verifySearchBtn" duration-ms="2263" started-at="2022-06-21T07:05:17 IST" finished-at="2022-06-21T07:05:19 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySearchBtn -->
-        <test-method status="PASS" signature="titleUrl()[pri:4, instance:com.qa.testcases.ManageLocationTestCase@103f852]" name="titleUrl" duration-ms="196" started-at="2022-06-08T14:27:11 IST" finished-at="2022-06-08T14:27:11 IST">
+        <test-method status="PASS" signature="titleUrl()[pri:5, instance:com.qa.testcases.ManageLocationTestCase@4c583ecf]" name="titleUrl" duration-ms="75" started-at="2022-06-21T07:05:19 IST" finished-at="2022-06-21T07:05:20 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- titleUrl -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.qa.testcases.ManageLocationTestCase@103f852]" name="close" is-config="true" duration-ms="3232" started-at="2022-06-08T14:27:11 IST" finished-at="2022-06-08T14:27:14 IST">
+        <test-method status="PASS" signature="close()[pri:0, instance:com.qa.testcases.ManageLocationTestCase@4c583ecf]" name="close" is-config="true" duration-ms="1936" started-at="2022-06-21T07:05:20 IST" finished-at="2022-06-21T07:05:22 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
       </class> <!-- com.qa.testcases.ManageLocationTestCase -->
-      <class name="com.qa.testcases.ManageNewsTestCase">
-        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.qa.testcases.ManageNewsTestCase@35a50a4c]" name="initializeDriver" is-config="true" duration-ms="24123" started-at="2022-06-08T14:26:11 IST" finished-at="2022-06-08T14:26:36 IST">
+      <class name="com.qa.testcases.PushNotificationsPageTestCase">
+        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.qa.testcases.PushNotificationsPageTestCase@7cc0cdad]" name="initializeDriver" is-config="true" duration-ms="7577" started-at="2022-06-21T07:04:30 IST" finished-at="2022-06-21T07:04:37 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method status="PASS" signature="performLogin()[pri:0, instance:com.qa.testcases.ManageNewsTestCase@35a50a4c]" name="performLogin" is-config="true" duration-ms="1753" started-at="2022-06-08T14:26:36 IST" finished-at="2022-06-08T14:26:37 IST">
+        <test-method status="PASS" signature="performLogin()[pri:0, instance:com.qa.testcases.PushNotificationsPageTestCase@7cc0cdad]" name="performLogin" is-config="true" duration-ms="1870" started-at="2022-06-21T07:04:37 IST" finished-at="2022-06-21T07:04:39 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- performLogin -->
-        <test-method status="PASS" signature="verifyNewBtn()[pri:1, instance:com.qa.testcases.ManageNewsTestCase@35a50a4c]" name="verifyNewBtn" duration-ms="6131" started-at="2022-06-08T14:26:37 IST" finished-at="2022-06-08T14:26:43 IST">
+        <test-method status="PASS" signature="testPushNotiPage()[pri:1, instance:com.qa.testcases.PushNotificationsPageTestCase@7cc0cdad]" name="testPushNotiPage" duration-ms="1520" started-at="2022-06-21T07:04:39 IST" finished-at="2022-06-21T07:04:41 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPushNotiPage -->
+        <test-method status="PASS" signature="verifyPushNotificationPage()[pri:2, instance:com.qa.testcases.PushNotificationsPageTestCase@7cc0cdad]" name="verifyPushNotificationPage" duration-ms="2459" started-at="2022-06-21T07:04:41 IST" finished-at="2022-06-21T07:04:43 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPushNotificationPage -->
+        <test-method status="PASS" signature="verifyAlert()[pri:3, instance:com.qa.testcases.PushNotificationsPageTestCase@7cc0cdad]" name="verifyAlert" duration-ms="58" started-at="2022-06-21T07:04:43 IST" finished-at="2022-06-21T07:04:43 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAlert -->
+        <test-method status="PASS" signature="verifyTestReset()[pri:4, instance:com.qa.testcases.PushNotificationsPageTestCase@7cc0cdad]" name="verifyTestReset" duration-ms="441" started-at="2022-06-21T07:04:43 IST" finished-at="2022-06-21T07:04:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTestReset -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.qa.testcases.PushNotificationsPageTestCase@7cc0cdad]" name="close" is-config="true" duration-ms="1379" started-at="2022-06-21T07:04:44 IST" finished-at="2022-06-21T07:04:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- com.qa.testcases.PushNotificationsPageTestCase -->
+      <class name="com.qa.testcases.ManageNewsTestCase">
+        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.qa.testcases.ManageNewsTestCase@4d5d943d]" name="initializeDriver" is-config="true" duration-ms="9470" started-at="2022-06-21T07:04:45 IST" finished-at="2022-06-21T07:04:55 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method status="PASS" signature="performLogin()[pri:0, instance:com.qa.testcases.ManageNewsTestCase@4d5d943d]" name="performLogin" is-config="true" duration-ms="1551" started-at="2022-06-21T07:04:55 IST" finished-at="2022-06-21T07:04:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- performLogin -->
+        <test-method status="PASS" signature="verifyNewBtn()[pri:1, instance:com.qa.testcases.ManageNewsTestCase@4d5d943d]" name="verifyNewBtn" duration-ms="2683" started-at="2022-06-21T07:04:56 IST" finished-at="2022-06-21T07:04:59 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyNewBtn -->
-        <test-method status="PASS" signature="verifyNewBtnAssert()[pri:2, instance:com.qa.testcases.ManageNewsTestCase@35a50a4c]" name="verifyNewBtnAssert" duration-ms="214" started-at="2022-06-08T14:26:43 IST" finished-at="2022-06-08T14:26:44 IST">
+        <test-method status="PASS" signature="verifyNewBtnAssert()[pri:2, instance:com.qa.testcases.ManageNewsTestCase@4d5d943d]" name="verifyNewBtnAssert" duration-ms="59" started-at="2022-06-21T07:04:59 IST" finished-at="2022-06-21T07:04:59 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyNewBtnAssert -->
-        <test-method status="PASS" signature="verifysearchBtn()[pri:3, instance:com.qa.testcases.ManageNewsTestCase@35a50a4c]" name="verifysearchBtn" duration-ms="2201" started-at="2022-06-08T14:26:44 IST" finished-at="2022-06-08T14:26:46 IST">
+        <test-method status="PASS" signature="verifysearchBtn()[pri:3, instance:com.qa.testcases.ManageNewsTestCase@4d5d943d]" name="verifysearchBtn" duration-ms="1487" started-at="2022-06-21T07:04:59 IST" finished-at="2022-06-21T07:05:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifysearchBtn -->
-        <test-method status="PASS" signature="verifyResetBtn()[pri:4, instance:com.qa.testcases.ManageNewsTestCase@35a50a4c]" name="verifyResetBtn" duration-ms="1041" started-at="2022-06-08T14:26:46 IST" finished-at="2022-06-08T14:26:47 IST">
+        <test-method status="PASS" signature="verifyResetBtn()[pri:4, instance:com.qa.testcases.ManageNewsTestCase@4d5d943d]" name="verifyResetBtn" duration-ms="701" started-at="2022-06-21T07:05:00 IST" finished-at="2022-06-21T07:05:01 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyResetBtn -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.qa.testcases.ManageNewsTestCase@35a50a4c]" name="close" is-config="true" duration-ms="714" started-at="2022-06-08T14:26:47 IST" finished-at="2022-06-08T14:26:48 IST">
+        <test-method status="PASS" signature="close()[pri:0, instance:com.qa.testcases.ManageNewsTestCase@4d5d943d]" name="close" is-config="true" duration-ms="1390" started-at="2022-06-21T07:05:01 IST" finished-at="2022-06-21T07:05:03 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
       </class> <!-- com.qa.testcases.ManageNewsTestCase -->
       <class name="com.qa.testcases.ManageOrderTestCase">
-        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.qa.testcases.ManageOrderTestCase@6dde5c8c]" name="initializeDriver" is-config="true" duration-ms="28782" started-at="2022-06-08T14:22:57 IST" finished-at="2022-06-08T14:23:25 IST">
+        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.qa.testcases.ManageOrderTestCase@2a4fb17b]" name="initializeDriver" is-config="true" duration-ms="9209" started-at="2022-06-21T07:03:19 IST" finished-at="2022-06-21T07:03:29 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method status="PASS" signature="performLogin()[pri:0, instance:com.qa.testcases.ManageOrderTestCase@6dde5c8c]" name="performLogin" is-config="true" duration-ms="2360" started-at="2022-06-08T14:23:25 IST" finished-at="2022-06-08T14:23:28 IST">
+        <test-method status="PASS" signature="performLogin()[pri:0, instance:com.qa.testcases.ManageOrderTestCase@2a4fb17b]" name="performLogin" is-config="true" duration-ms="1566" started-at="2022-06-21T07:03:29 IST" finished-at="2022-06-21T07:03:30 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- performLogin -->
-        <test-method status="PASS" signature="manageOrderPage()[pri:1, instance:com.qa.testcases.ManageOrderTestCase@6dde5c8c]" name="manageOrderPage" duration-ms="2757" started-at="2022-06-08T14:23:28 IST" finished-at="2022-06-08T14:23:30 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- manageOrderPage -->
-        <test-method status="PASS" signature="listOrderIsDisplayed()[pri:2, instance:com.qa.testcases.ManageOrderTestCase@6dde5c8c]" name="listOrderIsDisplayed" duration-ms="182" started-at="2022-06-08T14:23:30 IST" finished-at="2022-06-08T14:23:31 IST">
+        <test-method status="PASS" signature="listOrderIsDisplayed()[pri:1, instance:com.qa.testcases.ManageOrderTestCase@2a4fb17b]" name="listOrderIsDisplayed" duration-ms="2560" started-at="2022-06-21T07:03:30 IST" finished-at="2022-06-21T07:03:33 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- listOrderIsDisplayed -->
-        <test-method status="PASS" signature="verifyHomePageTitel()[pri:3, instance:com.qa.testcases.ManageOrderTestCase@6dde5c8c]" name="verifyHomePageTitel" duration-ms="18" started-at="2022-06-08T14:23:31 IST" finished-at="2022-06-08T14:23:31 IST">
+        <test-method status="PASS" signature="verifyHomePageTitel()[pri:2, instance:com.qa.testcases.ManageOrderTestCase@2a4fb17b]" name="verifyHomePageTitel" duration-ms="8" started-at="2022-06-21T07:03:33 IST" finished-at="2022-06-21T07:03:33 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomePageTitel -->
-        <test-method status="PASS" signature="searchManageOrderPage()[pri:4, instance:com.qa.testcases.ManageOrderTestCase@6dde5c8c]" name="searchManageOrderPage" duration-ms="4740" started-at="2022-06-08T14:23:31 IST" finished-at="2022-06-08T14:23:35 IST">
+        <test-method status="PASS" signature="searchManageOrderPage()[pri:3, instance:com.qa.testcases.ManageOrderTestCase@2a4fb17b]" name="searchManageOrderPage" duration-ms="2160" started-at="2022-06-21T07:03:33 IST" finished-at="2022-06-21T07:03:35 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchManageOrderPage -->
-        <test-method status="PASS" signature="orderIdManageOrderPage()[pri:5, instance:com.qa.testcases.ManageOrderTestCase@6dde5c8c]" name="orderIdManageOrderPage" duration-ms="487" started-at="2022-06-08T14:23:35 IST" finished-at="2022-06-08T14:23:36 IST">
+        <test-method status="PASS" signature="verifyReset()[pri:4, instance:com.qa.testcases.ManageOrderTestCase@2a4fb17b]" name="verifyReset" duration-ms="1489" started-at="2022-06-21T07:03:35 IST" finished-at="2022-06-21T07:03:36 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- orderIdManageOrderPage -->
-        <test-method status="PASS" signature="paymentmodeManageOrderPage()[pri:6, instance:com.qa.testcases.ManageOrderTestCase@6dde5c8c]" name="paymentmodeManageOrderPage" duration-ms="276" started-at="2022-06-08T14:23:36 IST" finished-at="2022-06-08T14:23:36 IST">
+        </test-method> <!-- verifyReset -->
+        <test-method status="PASS" signature="verifyView()[pri:5, instance:com.qa.testcases.ManageOrderTestCase@2a4fb17b]" name="verifyView" duration-ms="869" started-at="2022-06-21T07:03:36 IST" finished-at="2022-06-21T07:03:37 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- paymentmodeManageOrderPage -->
-        <test-method status="PASS" signature="statusManageOrderPage()[pri:7, instance:com.qa.testcases.ManageOrderTestCase@6dde5c8c]" name="statusManageOrderPage" duration-ms="195" started-at="2022-06-08T14:23:36 IST" finished-at="2022-06-08T14:23:36 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- statusManageOrderPage -->
-        <test-method status="PASS" signature="searchOrderIdManageOrderPage()[pri:8, instance:com.qa.testcases.ManageOrderTestCase@6dde5c8c]" name="searchOrderIdManageOrderPage" duration-ms="841" started-at="2022-06-08T14:23:36 IST" finished-at="2022-06-08T14:23:37 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchOrderIdManageOrderPage -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.qa.testcases.ManageOrderTestCase@6dde5c8c]" name="close" is-config="true" duration-ms="732" started-at="2022-06-08T14:23:37 IST" finished-at="2022-06-08T14:23:38 IST">
+        </test-method> <!-- verifyView -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.qa.testcases.ManageOrderTestCase@2a4fb17b]" name="close" is-config="true" duration-ms="1560" started-at="2022-06-21T07:03:37 IST" finished-at="2022-06-21T07:03:39 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
       </class> <!-- com.qa.testcases.ManageOrderTestCase -->
       <class name="com.qa.testcases.ManageUsersTestCase">
-        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.qa.testcases.ManageUsersTestCase@3b94d659]" name="initializeDriver" is-config="true" duration-ms="18438" started-at="2022-06-08T14:24:42 IST" finished-at="2022-06-08T14:25:00 IST">
+        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.qa.testcases.ManageUsersTestCase@459e9125]" name="initializeDriver" is-config="true" duration-ms="12009" started-at="2022-06-21T07:04:11 IST" finished-at="2022-06-21T07:04:23 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method status="PASS" signature="performLogin()[pri:0, instance:com.qa.testcases.ManageUsersTestCase@3b94d659]" name="performLogin" is-config="true" duration-ms="1537" started-at="2022-06-08T14:25:00 IST" finished-at="2022-06-08T14:25:02 IST">
+        <test-method status="PASS" signature="performLogin()[pri:0, instance:com.qa.testcases.ManageUsersTestCase@459e9125]" name="performLogin" is-config="true" duration-ms="1559" started-at="2022-06-21T07:04:23 IST" finished-at="2022-06-21T07:04:24 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- performLogin -->
-        <test-method status="PASS" signature="manageVerifyUsersPage()[pri:1, instance:com.qa.testcases.ManageUsersTestCase@3b94d659]" name="manageVerifyUsersPage" duration-ms="1008" started-at="2022-06-08T14:25:02 IST" finished-at="2022-06-08T14:25:03 IST">
+        <test-method status="PASS" signature="manageVerifyUsersPage()[pri:1, instance:com.qa.testcases.ManageUsersTestCase@459e9125]" name="manageVerifyUsersPage" duration-ms="710" started-at="2022-06-21T07:04:24 IST" finished-at="2022-06-21T07:04:25 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- manageVerifyUsersPage -->
-        <test-method status="PASS" signature="searchVerifyUsersPage()[pri:2, instance:com.qa.testcases.ManageUsersTestCase@3b94d659]" name="searchVerifyUsersPage" duration-ms="1712" started-at="2022-06-08T14:25:03 IST" finished-at="2022-06-08T14:25:05 IST">
+        <test-method status="PASS" signature="searchVerifyUsersPage()[pri:2, instance:com.qa.testcases.ManageUsersTestCase@459e9125]" name="searchVerifyUsersPage" duration-ms="2473" started-at="2022-06-21T07:04:25 IST" finished-at="2022-06-21T07:04:28 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchVerifyUsersPage -->
-        <test-method status="PASS" signature="putDetaildForsearch()[pri:3, instance:com.qa.testcases.ManageUsersTestCase@3b94d659]" name="putDetaildForsearch" duration-ms="1103" started-at="2022-06-08T14:25:05 IST" finished-at="2022-06-08T14:25:06 IST">
+        <test-method status="PASS" signature="verifyStatus()[pri:3, instance:com.qa.testcases.ManageUsersTestCase@459e9125]" name="verifyStatus" duration-ms="586" started-at="2022-06-21T07:04:28 IST" finished-at="2022-06-21T07:04:28 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- putDetaildForsearch -->
-        <test-method status="PASS" signature="putStatus()[pri:4, instance:com.qa.testcases.ManageUsersTestCase@3b94d659]" name="putStatus" duration-ms="229" started-at="2022-06-08T14:25:06 IST" finished-at="2022-06-08T14:25:06 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- putStatus -->
-        <test-method status="PASS" signature="getText()[pri:5, instance:com.qa.testcases.ManageUsersTestCase@3b94d659]" name="getText" duration-ms="45" started-at="2022-06-08T14:25:06 IST" finished-at="2022-06-08T14:25:06 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getText -->
-        <test-method status="PASS" signature="verifyTestResetBtn()[pri:6, instance:com.qa.testcases.ManageUsersTestCase@3b94d659]" name="verifyTestResetBtn" duration-ms="762" started-at="2022-06-08T14:25:06 IST" finished-at="2022-06-08T14:25:07 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTestResetBtn -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.qa.testcases.ManageUsersTestCase@3b94d659]" name="close" is-config="true" duration-ms="829" started-at="2022-06-08T14:25:07 IST" finished-at="2022-06-08T14:25:08 IST">
+        </test-method> <!-- verifyStatus -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.qa.testcases.ManageUsersTestCase@459e9125]" name="close" is-config="true" duration-ms="1648" started-at="2022-06-21T07:04:28 IST" finished-at="2022-06-21T07:04:30 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
       </class> <!-- com.qa.testcases.ManageUsersTestCase -->
       <class name="com.qa.testcases.SignInTestCase">
-        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.qa.testcases.SignInTestCase@4fcd19b3]" name="initializeDriver" is-config="true" duration-ms="11016" started-at="2022-06-08T14:22:20 IST" finished-at="2022-06-08T14:22:31 IST">
+        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.qa.testcases.SignInTestCase@799f10e1]" name="initializeDriver" is-config="true" duration-ms="14926" started-at="2022-06-21T07:02:37 IST" finished-at="2022-06-21T07:02:52 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.qa.testcases.SignInTestCase@4fcd19b3]" name="beforeMethod" is-config="true" duration-ms="78" started-at="2022-06-08T14:22:31 IST" finished-at="2022-06-08T14:22:31 IST">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.qa.testcases.SignInTestCase@799f10e1]" name="beforeMethod" is-config="true" duration-ms="1207" started-at="2022-06-21T07:02:52 IST" finished-at="2022-06-21T07:02:53 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="userIdFeildIsDisplayed()[pri:1, instance:com.qa.testcases.SignInTestCase@4fcd19b3]" name="userIdFeildIsDisplayed" duration-ms="234" started-at="2022-06-08T14:22:31 IST" finished-at="2022-06-08T14:22:31 IST">
+        <test-method status="PASS" signature="userIdFeildIsDisplayed()[pri:1, instance:com.qa.testcases.SignInTestCase@799f10e1]" name="userIdFeildIsDisplayed" duration-ms="896" started-at="2022-06-21T07:02:53 IST" finished-at="2022-06-21T07:02:54 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userIdFeildIsDisplayed -->
-        <test-method status="PASS" signature="passwordFeildIsDisplayed()[pri:2, instance:com.qa.testcases.SignInTestCase@4fcd19b3]" name="passwordFeildIsDisplayed" duration-ms="116" started-at="2022-06-08T14:22:31 IST" finished-at="2022-06-08T14:22:31 IST">
+        <test-method status="PASS" signature="passwordFeildIsDisplayed()[pri:2, instance:com.qa.testcases.SignInTestCase@799f10e1]" name="passwordFeildIsDisplayed" duration-ms="111" started-at="2022-06-21T07:02:54 IST" finished-at="2022-06-21T07:02:54 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- passwordFeildIsDisplayed -->
-        <test-method status="PASS" signature="passwordMasked()[pri:3, instance:com.qa.testcases.SignInTestCase@4fcd19b3]" name="passwordMasked" duration-ms="45" started-at="2022-06-08T14:22:31 IST" finished-at="2022-06-08T14:22:31 IST">
+        <test-method status="PASS" signature="passwordMasked()[pri:3, instance:com.qa.testcases.SignInTestCase@799f10e1]" name="passwordMasked" duration-ms="72" started-at="2022-06-21T07:02:54 IST" finished-at="2022-06-21T07:02:54 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- passwordMasked -->
-        <test-method status="PASS" signature="login()[pri:4, instance:com.qa.testcases.SignInTestCase@4fcd19b3]" name="login" duration-ms="2635" started-at="2022-06-08T14:22:31 IST" finished-at="2022-06-08T14:22:34 IST">
+        <test-method status="PASS" signature="login()[pri:4, instance:com.qa.testcases.SignInTestCase@799f10e1]" name="login" duration-ms="6672" started-at="2022-06-21T07:02:54 IST" finished-at="2022-06-21T07:03:01 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.qa.testcases.SignInTestCase@4fcd19b3]" name="close" is-config="true" duration-ms="720" started-at="2022-06-08T14:22:34 IST" finished-at="2022-06-08T14:22:35 IST">
+        <test-method status="PASS" signature="close()[pri:0, instance:com.qa.testcases.SignInTestCase@799f10e1]" name="close" is-config="true" duration-ms="2389" started-at="2022-06-21T07:03:01 IST" finished-at="2022-06-21T07:03:03 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
       </class> <!-- com.qa.testcases.SignInTestCase -->
       <class name="com.qa.testcases.ExpenseCategoryTestCase">
-        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.qa.testcases.ExpenseCategoryTestCase@10d59286]" name="initializeDriver" is-config="true" duration-ms="12885" started-at="2022-06-08T14:22:35 IST" finished-at="2022-06-08T14:22:48 IST">
+        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.qa.testcases.ExpenseCategoryTestCase@6302bbb1]" name="initializeDriver" is-config="true" duration-ms="8414" started-at="2022-06-21T07:03:03 IST" finished-at="2022-06-21T07:03:12 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method status="PASS" signature="performLogin()[pri:0, instance:com.qa.testcases.ExpenseCategoryTestCase@10d59286]" name="performLogin" is-config="true" duration-ms="1792" started-at="2022-06-08T14:22:48 IST" finished-at="2022-06-08T14:22:49 IST">
+        <test-method status="PASS" signature="performLogin()[pri:0, instance:com.qa.testcases.ExpenseCategoryTestCase@6302bbb1]" name="performLogin" is-config="true" duration-ms="1646" started-at="2022-06-21T07:03:12 IST" finished-at="2022-06-21T07:03:13 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- performLogin -->
-        <test-method status="PASS" signature="expenseCategoryPageVerification()[pri:1, instance:com.qa.testcases.ExpenseCategoryTestCase@10d59286]" name="expenseCategoryPageVerification" duration-ms="6131" started-at="2022-06-08T14:22:49 IST" finished-at="2022-06-08T14:22:56 IST">
+        <test-method status="PASS" signature="expenseCategoryPageVerification()[pri:1, instance:com.qa.testcases.ExpenseCategoryTestCase@6302bbb1]" name="expenseCategoryPageVerification" duration-ms="4445" started-at="2022-06-21T07:03:13 IST" finished-at="2022-06-21T07:03:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- expenseCategoryPageVerification -->
-        <test-method status="PASS" signature="verifyExpenseCategoryPageNewButtonElement()[pri:2, instance:com.qa.testcases.ExpenseCategoryTestCase@10d59286]" name="verifyExpenseCategoryPageNewButtonElement" duration-ms="118" started-at="2022-06-08T14:22:56 IST" finished-at="2022-06-08T14:22:56 IST">
+        <test-method status="PASS" signature="verifyExpenseCategoryPageNewButtonElement()[pri:2, instance:com.qa.testcases.ExpenseCategoryTestCase@6302bbb1]" name="verifyExpenseCategoryPageNewButtonElement" duration-ms="112" started-at="2022-06-21T07:03:18 IST" finished-at="2022-06-21T07:03:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyExpenseCategoryPageNewButtonElement -->
-        <test-method status="PASS" signature="verifyExpenseCategoryPageSearchButtonElement()[pri:3, instance:com.qa.testcases.ExpenseCategoryTestCase@10d59286]" name="verifyExpenseCategoryPageSearchButtonElement" duration-ms="112" started-at="2022-06-08T14:22:56 IST" finished-at="2022-06-08T14:22:56 IST">
+        <test-method status="PASS" signature="verifyExpenseCategoryPageSearchButtonElement()[pri:3, instance:com.qa.testcases.ExpenseCategoryTestCase@6302bbb1]" name="verifyExpenseCategoryPageSearchButtonElement" duration-ms="118" started-at="2022-06-21T07:03:18 IST" finished-at="2022-06-21T07:03:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyExpenseCategoryPageSearchButtonElement -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.qa.testcases.ExpenseCategoryTestCase@10d59286]" name="close" is-config="true" duration-ms="642" started-at="2022-06-08T14:22:56 IST" finished-at="2022-06-08T14:22:57 IST">
+        <test-method status="PASS" signature="close()[pri:0, instance:com.qa.testcases.ExpenseCategoryTestCase@6302bbb1]" name="close" is-config="true" duration-ms="1431" started-at="2022-06-21T07:03:18 IST" finished-at="2022-06-21T07:03:19 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
       </class> <!-- com.qa.testcases.ExpenseCategoryTestCase -->
       <class name="com.qa.testcases.ManageProductTestCase">
-        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.qa.testcases.ManageProductTestCase@5123a213]" name="initializeDriver" is-config="true" duration-ms="43174" started-at="2022-06-08T14:23:38 IST" finished-at="2022-06-08T14:24:21 IST">
+        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.qa.testcases.ManageProductTestCase@5c6648b0]" name="initializeDriver" is-config="true" duration-ms="12012" started-at="2022-06-21T07:03:39 IST" finished-at="2022-06-21T07:03:51 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method status="FAIL" signature="performLogin()[pri:0, instance:com.qa.testcases.ManageProductTestCase@5123a213]" name="performLogin" is-config="true" duration-ms="20357" started-at="2022-06-08T14:24:21 IST" finished-at="2022-06-08T14:24:41 IST">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: username' (tried for 20 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: username' (tried for 20 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at com.qa.utility.WaitUtility.visibilityOfEleLocated(WaitUtility.java:22)
-at com.qa.utility.PageUtility.performSendKey(PageUtility.java:22)
-at com.qa.Pages.SignInPage.login(SignInPage.java:73)
-at com.qa.testcases.ManageProductTestCase.performLogin(ManageProductTestCase.java:24)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
-  (Session info: chrome=101.0.4951.54)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.4', revision: '535d840ee2'
-System info: host: 'DAN_RAJU', ip: '192.168.232.146', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [afd997070255a43c37e01d9b90ea3735, findElement {using=name, value=username}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56895}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56895/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: afd997070255a43c37e01d9b90ea3735
-at sun.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method status="PASS" signature="performLogin()[pri:0, instance:com.qa.testcases.ManageProductTestCase@5c6648b0]" name="performLogin" is-config="true" duration-ms="1540" started-at="2022-06-21T07:03:51 IST" finished-at="2022-06-21T07:03:52 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- performLogin -->
-        <test-method status="SKIP" signature="manageProductPage()[pri:1, instance:com.qa.testcases.ManageProductTestCase@5123a213]" name="manageProductPage" duration-ms="0" started-at="2022-06-08T14:24:42 IST" finished-at="2022-06-08T14:24:42 IST">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: username' (tried for 20 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: username' (tried for 20 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at com.qa.utility.WaitUtility.visibilityOfEleLocated(WaitUtility.java:22)
-at com.qa.utility.PageUtility.performSendKey(PageUtility.java:22)
-at com.qa.Pages.SignInPage.login(SignInPage.java:73)
-at com.qa.testcases.ManageProductTestCase.performLogin(ManageProductTestCase.java:24)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
-  (Session info: chrome=101.0.4951.54)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.4', revision: '535d840ee2'
-System info: host: 'DAN_RAJU', ip: '192.168.232.146', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [afd997070255a43c37e01d9b90ea3735, findElement {using=name, value=username}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56895}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56895/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: afd997070255a43c37e01d9b90ea3735
-at sun.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method status="PASS" signature="verifyManageProduct()[pri:1, instance:com.qa.testcases.ManageProductTestCase@5c6648b0]" name="verifyManageProduct" duration-ms="1072" started-at="2022-06-21T07:03:52 IST" finished-at="2022-06-21T07:03:53 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- manageProductPage -->
-        <test-method status="SKIP" signature="testSearchBtn()[pri:2, instance:com.qa.testcases.ManageProductTestCase@5123a213]" name="testSearchBtn" duration-ms="0" started-at="2022-06-08T14:24:42 IST" finished-at="2022-06-08T14:24:42 IST">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: username' (tried for 20 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: username' (tried for 20 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at com.qa.utility.WaitUtility.visibilityOfEleLocated(WaitUtility.java:22)
-at com.qa.utility.PageUtility.performSendKey(PageUtility.java:22)
-at com.qa.Pages.SignInPage.login(SignInPage.java:73)
-at com.qa.testcases.ManageProductTestCase.performLogin(ManageProductTestCase.java:24)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
-  (Session info: chrome=101.0.4951.54)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.4', revision: '535d840ee2'
-System info: host: 'DAN_RAJU', ip: '192.168.232.146', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [afd997070255a43c37e01d9b90ea3735, findElement {using=name, value=username}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56895}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56895/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: afd997070255a43c37e01d9b90ea3735
-at sun.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        </test-method> <!-- verifyManageProduct -->
+        <test-method status="PASS" signature="verifyManageProductPage()[pri:2, instance:com.qa.testcases.ManageProductTestCase@5c6648b0]" name="verifyManageProductPage" duration-ms="12075" started-at="2022-06-21T07:03:53 IST" finished-at="2022-06-21T07:04:05 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSearchBtn -->
-        <test-method status="SKIP" signature="close()[pri:0, instance:com.qa.testcases.ManageProductTestCase@5123a213]" name="close" is-config="true" duration-ms="-1654678482333" started-at="2022-06-08T14:24:42 IST" finished-at="1970-01-01T05:30:00 IST">
+        </test-method> <!-- verifyManageProductPage -->
+        <test-method status="PASS" signature="verifySearchBtn()[pri:3, instance:com.qa.testcases.ManageProductTestCase@5c6648b0]" name="verifySearchBtn" duration-ms="3195" started-at="2022-06-21T07:04:05 IST" finished-at="2022-06-21T07:04:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySearchBtn -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.qa.testcases.ManageProductTestCase@5c6648b0]" name="close" is-config="true" duration-ms="2169" started-at="2022-06-21T07:04:09 IST" finished-at="2022-06-21T07:04:11 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->

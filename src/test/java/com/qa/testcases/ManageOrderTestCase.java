@@ -24,74 +24,48 @@ public void performLogin()
  sp.login("admin", "admin");
 }
 
-
-@Test(priority=1)
-public void manageOrderPage()
-{
-	hp.manageOrderClick();
-}
-
 @Test(priority=2)
-public void listOrderIsDisplayed()
-{
-boolean listOrderIsDisplayed=hp.isPageOpened();
-Assert.assertTrue(listOrderIsDisplayed);
-}
-
-@Test(priority=3)
 public void verifyHomePageTitel()
 {
 	String homepageTitle= hp.homePageTitle();
 	Assert.assertEquals(homepageTitle,"List Orders | 7rmart supermarket");
 }
 
-@Test(priority=4)
+@Test(priority=1)
+public void listOrderIsDisplayed()
+{
+	hp.manageOrderClick();
+boolean listOrderIsDisplayed=hp.manageOrderClick();
+Assert.assertTrue(listOrderIsDisplayed);
+}
+
+@Test(priority=3)
 public void searchManageOrderPage()
 {
 	hp.searchManageOrder();
+	boolean searchVerifyUsersPage=hp.isUserFound();
+	Assert.assertTrue(searchVerifyUsersPage);
 }
+
+@Test(priority=4)
+public void verifyReset()
+{
+	hp.clickOnReset();
+	String expected="https://groceryapp.uniqassosiates.com/admin/list-order";	   
+    String actual=driver.getCurrentUrl();
+    Assert.assertEquals(actual, expected,"titles are same");	   
+}
+
 
 @Test(priority=5)
-public void orderIdManageOrderPage()
+public void verifyView()
 {
-	hp.orderIdManageOrder();
-}
+	hp.view();
+	boolean verifyView=hp.clickOrderDetails();
+	Assert.assertTrue(verifyView);
 
-@Test(priority=6)
-public void paymentmodeManageOrderPage()
-{
-	hp.paymentModeManageOrder();
-}
-
-@Test(priority=7)
-public void statusManageOrderPage()
-{
-	hp.statusManageOrder();
-}
-
-@Test(priority=8)
-public void searchOrderIdManageOrderPage()
-{
-	hp.searchOrderidManageOrder();
-}
-
-@AfterClass
-public void close()
-{
-	sp= new SignInPage(driver);
-	sp.logout();
-}
-
-/*@AfterClass
-
-public void performLogout()
-{
-	sp= new SignInPage(driver);
-	 sp.logout(); 
-}  */
 }
 
 
-
-
+}
 

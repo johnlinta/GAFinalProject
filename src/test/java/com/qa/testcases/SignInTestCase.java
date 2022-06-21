@@ -57,7 +57,7 @@ public class SignInTestCase extends Base
 	public void passwordMasked()
 	{
 		boolean passwordMasked=sp.isMasked();
-		Assert.assertFalse(passwordMasked);
+		Assert.assertTrue(passwordMasked);
 	} 
 	
 	
@@ -67,6 +67,7 @@ public class SignInTestCase extends Base
 	public void close()
 	{
 		sp.logout();
+		
 	}
 }
 

@@ -34,6 +34,18 @@ public class ManageOrderPage extends Base
  @FindBy (xpath="//h1[@class='m-0 text-dark']")
  WebElement textListOrders;
  
+ @FindBy (id="res")
+ WebElement userFound;
+ 
+ @FindBy (name="Reset")
+ WebElement resetBtn;
+ 
+ @FindBy (xpath="//a[text()='View'][1]")
+ WebElement viewBtn;
+ 
+ @FindBy (xpath="//h1[@class='m-0 text-dark']")
+ WebElement orderDetails;
+ 
  public  ManageOrderPage(WebDriver driver)
  {
 	 this.driver=driver;
@@ -47,49 +59,59 @@ public class ManageOrderPage extends Base
 	return driver.getTitle();
 	 
  }
- public void manageOrderClick()
+ public boolean manageOrderClick()
  {
 	 WaitUtility.visibilityOfEleLocated(driver,manageOrders );
 	 PageUtility.performClick(driver, manageOrders);
 	 
+	 return textListOrders.getText().toString().contains("List Orders");
  }
+ 
  
  public void searchManageOrder()
  {
 	 WaitUtility.visibilityOfEleLocated(driver,search );
 	 PageUtility.performClick(driver, search);
-	 //search.click();
- }
- 
- public boolean isPageOpened()
- {
-	 return textListOrders.getText().toString().contains("List Orders");
- }
- 
- public void orderIdManageOrder()
- {
 	 WaitUtility.visibilityOfEleLocated(driver,orderId );
 	 PageUtility.performClick(driver, orderId);
-	 PageUtility.performSendKey(driver, orderId, "580");
- }
- 
- public void paymentModeManageOrder()
- { 
+	 PageUtility.performSendKey(driver, orderId, "580"); 
 	 WaitUtility.visibilityOfEleLocated(driver,paymentMode );
 	 PageUtility.dropdown(paymentMode, "Bank");
- }
- 
- public void statusManageOrder()
- { 
 	 WaitUtility.visibilityOfEleLocated(driver,status);
 	 PageUtility.dropdown(status, "Out For Delivery");
- }
- 
- public void searchOrderidManageOrder()
- {
 	 WaitUtility.visibilityOfEleLocated(driver,searchOrderid );
 	 PageUtility.performClick(driver, searchOrderid);
  }
+ 
+ 
+ public boolean isUserFound()
+	{
+		WaitUtility.visibilityOfEleLocated(driver,userFound );
+		boolean isDisplayed=PageUtility.isElementDisplayed(userFound);
+		return isDisplayed;	
+	}
+
+
+ public void clickOnReset()
+ {
+	 WaitUtility.visibilityOfEleLocated(driver,resetBtn );
+	 PageUtility.performClick(driver, resetBtn); 
+ }
+ 
+ 
+ public void view()
+ {
+	 WaitUtility.visibilityOfEleLocated(driver,viewBtn );
+	 PageUtility.performClick(driver, viewBtn);  	 
+ }
+ 
+ public boolean clickOrderDetails()
+	{
+		WaitUtility.visibilityOfEleLocated(driver, orderDetails);
+		boolean isDisplayed=PageUtility.isElementDisplayed(orderDetails);
+		return isDisplayed;	
+	}
+
 
 }
 

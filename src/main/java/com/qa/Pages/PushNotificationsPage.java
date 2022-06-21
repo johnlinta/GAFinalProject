@@ -33,6 +33,8 @@ public class PushNotificationsPage extends Base
 	@FindBy(xpath="//a[text()='Reset']")
 	WebElement reset;
 	
+	@FindBy(xpath="//h1[@class='m-0 text-dark']")
+	WebElement textPushNoti;
 	
 	public PushNotificationsPage(WebDriver driver)
 	{
@@ -40,8 +42,17 @@ public class PushNotificationsPage extends Base
 		PageFactory.initElements(driver,this);
 		
 	}
+	
+	public boolean testPage()
+	{
+		WaitUtility.visibilityOfEleLocated(driver,pushnotifctn );
+		 PageUtility.performClick(driver,pushnotifctn);
+		return textPushNoti.getText().toString().contains("Push Notifications");
+	}
 	public void testPushNotificationPage() 
 	{
+		WaitUtility.visibilityOfEleLocated(driver,pushnotifctn );
+		 PageUtility.performClick(driver,pushnotifctn);
 		WaitUtility.visibilityOfEleLocated(driver,pushnotifctn );
 		 PageUtility.performClick(driver,pushnotifctn);
 		 WaitUtility.visibilityOfEleLocated(driver,title );

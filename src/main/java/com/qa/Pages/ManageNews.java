@@ -49,12 +49,17 @@ public class ManageNews extends Base
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-warning']")
 	WebElement resetBtn;
 	
+	@FindBy(xpath="//h1[@class='m-0 text-dark']")
+	WebElement textNews;
+	
 public ManageNews(WebDriver driver)
 {
 	this.driver=driver;
 	PageFactory.initElements(driver, this);
 	
 }
+
+
 public void newBtn() 
 {
 	WaitUtility.visibilityOfEleLocated(driver,managecontent );

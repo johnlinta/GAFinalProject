@@ -10,7 +10,7 @@ public class ExtendReportUtility
 		String path =System.getProperty("user.dir")+"\\reports\\ExtentReport.html";
 		
 		ExtentSparkReporter reporter = new ExtentSparkReporter(path);
-		reporter.config().setReportName("Subin");
+		reporter.config().setReportName("Linta");
 		reporter.config().setDocumentTitle("Automation execution report");
 
 		extent =new ExtentReports();

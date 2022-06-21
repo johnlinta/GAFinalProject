@@ -28,6 +28,8 @@ public class ManageUsersTestCase extends Base
 	public void manageVerifyUsersPage()
 	{
 		vu.verifyUserClick();
+		vu.isPageOpened();
+		Assert.assertTrue(vu.isPageOpened());
 	}
 	
 	
@@ -36,44 +38,36 @@ public class ManageUsersTestCase extends Base
    public void searchVerifyUsersPage()
 
    {  
-	vu.clickOnVerifyUser();
-   }  
-  
+	vu.verifyUserClick();
+	vu.clickOnVerifyUser();  
+	vu.getDetailsForSearch("Akhil", "akhildas710@gmail.com","9513318407");   
+	vu.status();
+	vu.searchUserPage();
+	boolean searchVerifyUsersPage=vu.isUserFound();
+	Assert.assertTrue(searchVerifyUsersPage);
+   }
+   
+   
+   
    
    @Test(priority=3)
+   public void verifyStatus()
+   {
+	   vu.clickOnReset();
+	   String expected="https://groceryapp.uniqassosiates.com/admin/list-user";	   
+	   String actual=driver.getCurrentUrl();
+	   Assert.assertEquals(actual, expected,"titles are same");	   
+   }
+	
    
-	   public  void putDetaildForsearch()
+ /* @Test(priority=4)	  
+	   public void verifyAction()
 	   {
-		vu.getDetailsForSearch("Akhil", "akhildas710@gmail.com","9513318407");   
+		  vu.clickOnAction();
+		  boolean verifyAction=vu.clickOnAction();
+		  Assert.assertTrue(verifyAction); 
 	   }
+*/
    
-   @Test(priority=4)
-   
-   public void putStatus()
-   {
-	   vu.status();
-   }
-   
-   @Test(priority=5)
-   public void getText()
-   {
-	   vu.isPageOpened();
-
-	}
-   
-   @Test(priority=6)
-   public void verifyTestResetBtn()
-   {
-	   vu.testeResetBtn();
-	   String expected="https://groceryapp.uniqassosiates.com/admin/list-user";
-		String actual=driver.getCurrentUrl();
-	   Assert.assertEquals(actual, expected,"titles are  same");
-   }
-   @AfterClass
-	public void close()
-	{
-	   sp= new SignInPage(driver);
-		sp.logout();
-	}
    
    }

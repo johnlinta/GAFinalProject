@@ -29,7 +29,9 @@ public void performLogin()
 	public void expenseCategoryPageVerification()
 	{
 		ec.ExpenseCategoryPageAction();
-		
+		String expected="https://groceryapp.uniqassosiates.com/admin/expense-category";
+		String actual=driver.getCurrentUrl();
+		Assert.assertEquals(actual, expected, "titles are  same");
 	}
 	
 	@Test(priority=2)
@@ -45,13 +47,6 @@ public void performLogin()
 		ec.expenseCategoryPageSearchButtonElement();
 		Assert.assertTrue(ec.expenseCategoryPageSearchButtonElement());
 		
-		
-	}
+	}  
 
-	@AfterClass
-	public void close()
-	{
-		sp= new SignInPage(driver);
-		sp.logout();
-	}
 }

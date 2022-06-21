@@ -41,6 +41,18 @@ public class ManageUsersPage extends Base
 	 @FindBy (xpath="//h1[@class='m-0 text-dark']")
 	 WebElement textListUsers;
 	 
+	 @FindBy (id="res")
+	 WebElement userFound;
+	 
+	 @FindBy (xpath="//i[@class='ace-icon fa fa-sync-alt']")
+	 WebElement resetBtn;
+	 
+	 @FindBy (xpath="//i[@class='badge bg-success']")
+	 WebElement actionBtn;
+	 
+	 @FindBy (xpath="//div[@class='alert alert-success alert-dismissible']")	
+	 WebElement alertMsg;
+	 
 	public  ManageUsersPage(WebDriver driver)
 	 {
 		 this.driver=driver;
@@ -66,23 +78,42 @@ public class ManageUsersPage extends Base
 		action.moveToElement(verifyUsers).build().perform();
 		search1.click();		
 	}
-	
-	public void getDetailsForSearch(String giveName,String giveemail, String givenum)
+		public void getDetailsForSearch(String giveName,String giveemail, String givenum)
 	{
 		PageUtility.performSendKey(driver, name, giveName);
 		PageUtility.performSendKey(driver, email, giveemail);
 		PageUtility.performSendKey(driver, phone,givenum );
 		
 	}
-	
 	public void status()
 	 { 
 		 WaitUtility.visibilityOfEleLocated(driver,status );
 		 PageUtility.dropdown(status, "Inactive");
-	 }
-    
-	public void testeResetBtn()
+	 }	
+	public void searchUserPage()
 	{
-		PageUtility.performClick(driver, resetbtn);
+		PageUtility.performClick(driver, search2);
 	}
+	public boolean isUserFound()
+	{
+		WaitUtility.visibilityOfEleLocated(driver,userFound );
+		boolean isDisplayed=PageUtility.isElementDisplayed(userFound);
+		return isDisplayed;	
+	}
+	
+	
+	public void clickOnReset()
+	{
+		WaitUtility.visibilityOfEleLocated(driver,resetBtn );
+		PageUtility.performClick(driver, resetBtn);
+	}
+	
+	
+	public boolean clickOnAction()
+	{
+		WaitUtility.visibilityOfEleLocated(driver,actionBtn );
+		PageUtility.performClick(driver, actionBtn);
+		return true;		
+	}
+	
 }

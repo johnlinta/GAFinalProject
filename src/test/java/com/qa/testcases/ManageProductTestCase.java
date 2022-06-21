@@ -26,24 +26,36 @@ public class ManageProductTestCase extends Base
 
 @Test(priority=1)
 
-public void manageProductPage()
+public void verifyManageProduct()
 {
-	mp.testManageProductPage();
+	mp.clickOnManageProduct();
+	mp.isPageOpened();
+	Assert.assertTrue(mp.isPageOpened());
 }
+
 
 @Test(priority=2)
-public void testSearchBtn()
+public void  verifyManageProductPage()
+{
+	mp.testManageProductPage();	
+}  
+
+@Test(priority=3)
+public void verifySearchBtn()
 {
 	mp.testSearchBtn();
-//	Assert.assertTrue(true);
+	mp.isUserFound();
+	boolean verifySearchBtn=mp.isUserFound();
+	Assert.assertTrue(verifySearchBtn);
 }
 
-@AfterClass
-public void close()
+/*@Test(priority=4)
+public void verifyResetBtn()
 {
-	sp= new SignInPage(driver);
-	sp.logout();
-}
+	mp.testResetBtn();
+	boolean verifyResetBtn=mp.testResetBtn();
+	Assert.assertTrue(verifyResetBtn);
+}  */
 }
 
 

@@ -24,41 +24,48 @@ public class ManageLocationTestCase extends Base
 	 sp.login("admin", "admin");
 	}
 
-	
 	@Test(priority=1)
+	public void verifyLocation()
+	{
+		ml.clickLocation();
+		boolean verifyLocation=ml.clickLocation();
+		Assert.assertTrue(verifyLocation);
+	}
+	
+	@Test(priority=2)
 	public void verifyNewBtn()
 	{
 		ml.newOnClick();
+		String expected="https://groceryapp.uniqassosiates.com/admin/Location/add";
+		String actual=driver.getCurrentUrl();
+		Assert.assertEquals(actual, expected, "titles are  same");
+		
 	}
 	
 	
-	
-	@Test(priority=2)
+	@Test(priority=3)
 	public void verifyNewBtnAlert()
 	{
 		Assert.assertTrue(ml.newButtonAlert());
 	}
 	
 	
-	@Test(priority=3)
+	@Test(priority=4)
 	public void verifySearchBtn()
 	{
 		ml.searchOnClick();
-
+		ml.isLocFound();
+		boolean verifySearchBtn=ml.isLocFound();
+		Assert.assertTrue(verifySearchBtn);
 	}
 	
 	
-   @Test(priority=4)
+   @Test(priority=5)
 	public void titleUrl()
 	{
 	String url=driver.getCurrentUrl();
 	String title=driver.getTitle();
 	Assert.assertTrue(true);
-	}
-   @AfterClass
-	public void close()
-	{
-	   sp= new SignInPage(driver);
-		sp.logout();
-	}
+	}  
+  
 }

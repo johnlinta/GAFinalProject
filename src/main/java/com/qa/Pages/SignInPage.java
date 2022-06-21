@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.qa.base.Base;
 import com.qa.utility.PageUtility;
 import com.qa.utility.ScreenshotsUtil;
@@ -58,7 +57,7 @@ public class SignInPage extends Base
   
   public boolean isMasked()
   {
-	  boolean masked=false;
+	  boolean masked=true;
 	 
 
 	  if(pass.getAttribute("type").equals("pass"))
@@ -66,7 +65,6 @@ public class SignInPage extends Base
 		  masked=true;
 	  }
 	return masked;
-	  
   }
   public void login(String username, String password)
   {
@@ -90,7 +88,7 @@ public void logout()
 	  WaitUtility.visibilityOfEleLocated(driver, Admin);
 	  PageUtility.performClick(driver, Admin);
 	  PageUtility.performClick(driver, logout);
-	  
+	  driver.quit();
   }
      
 }

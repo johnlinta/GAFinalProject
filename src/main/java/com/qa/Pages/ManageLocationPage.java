@@ -54,6 +54,11 @@ WebElement location2;
 @FindBy (name="Search")
 WebElement search2;
 
+@FindBy (xpath="//h1[@class='m-0 text-dark']")
+WebElement textLocation;
+
+@FindBy (xpath="//h4[@class='card-title']")
+WebElement textSearchLocation;
 
 public  ManageLocationPage(WebDriver driver)
 	 {
@@ -62,6 +67,12 @@ public  ManageLocationPage(WebDriver driver)
 		
 	 }
 
+public boolean clickLocation()
+{
+	 WaitUtility.visibilityOfEleLocated(driver,manageLocation );
+	 PageUtility.performClick(driver,manageLocation );
+	 return textLocation.getText().toString().contains("List Locations");
+}
    public void newOnClick()
    {
 	 WaitUtility.visibilityOfEleLocated(driver,manageLocation );
@@ -125,7 +136,13 @@ public  ManageLocationPage(WebDriver driver)
  	 WaitUtility.visibilityOfEleLocated(driver, search2 );
  	 PageUtility.performClick(driver,search2 );
  	
+ 	 
      }
    
- 
+    public boolean isLocFound()
+	{
+		WaitUtility.visibilityOfEleLocated(driver,textSearchLocation );
+		boolean isDisplayed=PageUtility.isElementDisplayed(textSearchLocation);
+		return isDisplayed;	
+	}
 }

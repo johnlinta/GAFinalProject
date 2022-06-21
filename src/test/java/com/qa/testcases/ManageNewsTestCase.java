@@ -25,13 +25,14 @@ public class ManageNewsTestCase extends Base
 
 	
 	@Test(priority=1)
-	public void verifyNewBtn() {
-		mn.newBtn();
-		
+	public void verifyNewBtn() 
+	{
+	mn.newBtn();
 	}
 	@Test(priority=2)
 	public void verifyNewBtnAssert() 
 	{
+		
 		mn.newBtnAlert();
 		Assert.assertTrue(true);
 	}
@@ -52,10 +53,4 @@ public class ManageNewsTestCase extends Base
 		Assert.assertEquals(actual, expected,"urls are different");
 	}
 	
-	@AfterClass
-	public void close()
-	{
-		sp= new SignInPage(driver);
-		sp.logout();
 	}
-}

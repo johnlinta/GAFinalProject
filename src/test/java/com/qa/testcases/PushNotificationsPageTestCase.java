@@ -25,31 +25,34 @@ public void performLogin()
 }
 
 	
-	@Test(priority=1)
+    @Test(priority=1)
+    public void testPushNotiPage()
+    {
+    	pp.testPage();
+    	boolean verifyPushNotificationPage=pp.testPage();
+		Assert.assertTrue(verifyPushNotificationPage);
+    }
+	@Test(priority=2)
 	public void verifyPushNotificationPage()
 	{
 		pp.testPushNotificationPage();
+		String expected="https://groceryapp.uniqassosiates.com/admin/Notification/add";
+		String actual=driver.getCurrentUrl();
+		Assert.assertEquals(actual, expected, "titles are  same");
 	}
-	@Test(priority=2)
+	
+	@Test(priority=3)
 	public void verifyAlert()
 	{
 		
 		Assert.assertTrue(pp.testAlert());
 	}
-	@Test(priority=3)
+	@Test(priority=4)
 	public void verifyTestReset() 
 	{
 		pp.testReset();
 		String expected="https://groceryapp.uniqassosiates.com/admin/list-notifications";
 		String actual=driver.getCurrentUrl();
 		Assert.assertEquals(actual, expected, "titles are  same");
-	}
-	
-	@AfterClass
-	public void close()
-	{
-		sp= new SignInPage(driver);
-		sp.logout();
-	}
-
+	} 
 }

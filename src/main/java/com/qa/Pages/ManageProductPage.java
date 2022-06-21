@@ -2,6 +2,7 @@ package com.qa.Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -105,16 +106,44 @@ public class ManageProductPage extends Base
 	@FindBy(name="Search")
 	WebElement search;
 	
+	@FindBy (xpath="//h1[@class='m-0 text-dark']")
+	WebElement listProduct;
+	
+	@FindBy (name="create")
+	WebElement saveBtn;
+	
+	@FindBy (xpath="//div[@class='alert alert-danger alert-dismissible']")
+	WebElement productAdded;
+	
+	@FindBy (id="res")
+	WebElement userFound;
+	
+	@FindBy (name="Reset")
+	WebElement searchReset;
+	
+	@FindBy (xpath="//h1[@class='m-0 text-dark']")
+	WebElement textListProduct;
+	
 	public ManageProductPage(WebDriver driver)
 	{
 		this.driver=driver;
 		 PageFactory.initElements(driver, this);
 
 	}
-
-	public void testManageProductPage() 
+	
+	public void clickOnManageProduct()
 	{
 		PageUtility.performClick(driver,manageproduct);
+	}
+
+	public boolean isPageOpened()
+	 {
+		 return listProduct.getText().toString().contains("List Products");
+	 }
+	
+	public void testManageProductPage() 
+	{
+		
 		PageUtility.performClick(driver,newbtn);
 		PageUtility.performClick(driver,title);
 		PageUtility.performSendKey(driver,title, "BANANA");
@@ -155,8 +184,20 @@ public class ManageProductPage extends Base
 
 		PageUtility.performSendKey(driver,blocktext, "order details updated");
 		
-				
+		/*WaitUtility.visibilityOfEleLocated(driver, savebtn);
+		Actions action=new Actions(driver);
+		action.moveToElement(savebtn).build().perform();
+		savebtn.click(); */
+		
 	}
+	
+	
+	public void isProductAdded()
+	 {
+		
+		 //return productAdded.getText().toString().contains("Alert!");
+	 }
+	
 		/*public void pic()
 		
 		{
@@ -178,19 +219,31 @@ public class ManageProductPage extends Base
 		 PageUtility.performClick(driver,category );
 		 PageUtility.dropdown(category, "Personal Care");
 		
+		 WaitUtility.visibilityOfEleLocated(driver,searchcategory );
 		PageUtility.performClick(driver,searchcategory );
-		 PageUtility.dropdown(searchcategory, "Oral Care");
+		 PageUtility.dropdown(searchcategory, "Health");
 		 
 		 WaitUtility.visibilityOfEleLocated(driver,searchsubmit );
 		 PageUtility.performClick(driver,searchsubmit );
+		 
+		 
 	}
 
+	public boolean isUserFound()
+	{
+		WaitUtility.visibilityOfEleLocated(driver,userFound );
+		boolean isDisplayed=PageUtility.isElementDisplayed(userFound);
+		return isDisplayed;	
+	}
+	
 
 	
-	public void testResetBtn()
+	public boolean testResetBtn()
 	{
-		PageUtility.performClick(driver,searchreset);
-
+		WaitUtility.visibilityOfEleLocated(driver,searchReset);
+		PageUtility.performClick(driver,searchReset);
+		WaitUtility.visibilityOfEleLocated(driver,textListProduct);
+		return textListProduct.getText().toString().contains("List Products");
 	}  
 
 }
